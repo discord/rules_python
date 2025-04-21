@@ -158,7 +158,7 @@ def _python_repository_impl(rctx):
             else:
                 fail_or_warn("The current user has CAP_DAC_OVERRIDE set, which can cause spurious cache misses or build failures with the hermetic Python interpreter. See https://github.com/bazelbuild/rules_python/pull/713.")
 
-    python_bin = "python.exe" if ("windows" in platform) else "bin/python3"
+    python_bin = "python.exe" if ("windows" in platform) else "bin/python"
 
     if "linux" in platform:
         # Workaround around https://github.com/indygreg/python-build-standalone/issues/231
